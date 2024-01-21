@@ -1,0 +1,107 @@
+.carousol .list .item:nth-child(1){
+    z-index: 1;
+}
+.carousol .list .item:nth-child(1) .author,
+.carousol .list .item:nth-child(1) .title,
+.carousol .list .item:nth-child(1) .topic,
+.carousol .list .item:nth-child(1) .des,
+.carousol .list .item:nth-child(1) .buttons{
+    transform: translateY(50px);
+    filter: blur(20px);
+    
+    animation: showContent .5s 1s linear 1 forwards;
+}
+@keyframes showContent{
+    to{
+        opacity: 1;
+        filter: blur(0);
+        transform: translateY(0);
+    }
+}
+.carousol .list .item:nth-child(1) .title{
+    animation-delay: 1.2s;
+}
+.carousol .list .item:nth-child(1) .topic{
+    animation-delay: 1.4s;
+}
+.carousol .list .item:nth-child(1) .des{
+    animation-delay: 1.6s;
+}
+.carousol .list .item:nth-child(1) .buttons{
+    animation-delay: 1.8s;
+}
+.next .item:nth-child(1) img{
+    width: 150px;
+    height: 200px;
+    position: absolute;
+    bottom: 50px;
+    left: 50%;
+    border-radius: 20px;
+    animation: showImage .5s linear 1 forwards;
+}
+@keyframes showImage{
+    to{
+        height: 100%;
+        width: 100%;
+        bottom: 0;
+        left: 0;
+        border-radius: 0;
+    }
+}
+.next .thu-item:nth-last-child(1){
+    width: 0;
+    overflow: hidden;
+    animation: showThumbnail .5s linear 1 forwards;
+}
+@keyframes showThumbnail{
+    to{
+        width: 150px;
+    }
+}
+.next .thu-item{
+    transform: translateX(150px);
+    animation: transformContent .5s forwards 1 linear;
+}
+@keyframes transformContent{
+    to{
+        transform: translateX(0);
+    }
+}
+.prev .item:nth-child(2) {
+    z-index: 2;
+}
+.prev .item:nth-child(2) img{
+    left: 0;
+    bottom: 0;
+    position: absolute;
+    animation: outImage .5s linear 1 forwards;
+}
+@keyframes outImage{
+    to {
+        width: 150px;
+        height: 200px;
+        left: 50%;
+        bottom: 50px;
+        border-radius: 20px;
+    }
+}
+.prev .thu-item:nth-child(1){
+    width: 0;
+    overflow: hidden;
+    opacity: 0;
+    animation:  showThumbnail .5s linear 1 forwards;
+}
+.prev .list .item:nth-child(2) .author,
+.prev .list .item:nth-child(2) ,title
+.prev .list .item:nth-child(2) .topic,
+.prev .list .item:nth-child(2) .des,
+.prev .list .item:nth-child(2) .buttons{
+    animation: layerTransform 1.5s linear 1 forwards;
+}
+@keyframes layerTransform{
+    to{
+        transform: translateY(-150px);
+        filter: blur(20px);
+        opacity: 0;
+    }
+}
